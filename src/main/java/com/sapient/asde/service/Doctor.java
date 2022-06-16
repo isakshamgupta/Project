@@ -15,7 +15,7 @@ public class Doctor {
     private String hospitalDetails;
     private String username;
 
-    public Doctor(){
+    public Doctor() {
 
     }
 
