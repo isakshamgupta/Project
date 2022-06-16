@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalTime;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class DoctorTest {
@@ -11,8 +13,11 @@ class DoctorTest {
 
     @BeforeEach
     void setUp() {
-        doctor = new Doctor(101, "Subhash", "MBBS", "Cardio", 10,
-                14:00:00.000, 20:00:00.000, 9905768653L, "sub@gmail.com", "kalawati hospital", "sub2019");
+        doctor = new Doctor(101, "Subhash", "MBBS",
+                "Cardio", 10,
+                LocalTime.parse("08:00"), LocalTime.parse("16:00"),
+                9905768653L, "sub@gmail.com", "kalawati hospital",
+                "sub2019");
     }
 
     @AfterEach
@@ -22,122 +27,122 @@ class DoctorTest {
 
     @Test
     void getDoctId() {
-        assertEquals(, doctor.getDoctId());
+        assertEquals(101, doctor.getDoctId());
     }
 
     @Test
     void setDoctId() {
-        doctor.setDoctId();
-        assertEquals(, doctor.getDoctId());
+        doctor.setDoctId(100);
+        assertEquals(100, doctor.getDoctId());
     }
 
     @Test
     void getDoctorName() {
-        assertEquals(, doctor.getDoctorName());
+        assertEquals("Subhash", doctor.getDoctorName());
     }
 
     @Test
     void setDoctorName() {
-        doctor.setDoctorName();
-        assertEquals(, doctor.getDoctorName());
+        doctor.setDoctorName("Sonu");
+        assertEquals("Sonu", doctor.getDoctorName());
     }
 
     @Test
     void getQualification() {
-        assertEquals(, doctor.getQualification());
+        assertEquals("MBBS", doctor.getQualification());
     }
 
     @Test
     void setQualification() {
-        doctor.setQualification();
-        assertEquals(, doctor.getQualification());
+        doctor.setQualification("BDS");
+        assertEquals("BDS", doctor.getQualification());
     }
 
     @Test
     void getSpecialization() {
-        assertEquals(, doctor.getSpecialization());
+        assertEquals("Cardio", doctor.getSpecialization());
     }
 
     @Test
     void setSpecialization() {
-        doctor.setSpecialization();
-        assertEquals(, doctor.getSpecialization());
+        doctor.setSpecialization("Bone");
+        assertEquals("Bone", doctor.getSpecialization());
     }
 
     @Test
     void getExperience() {
-        assertEquals(, doctor.getExperience());
+        assertEquals(10, doctor.getExperience());
     }
 
     @Test
     void setExperience() {
-        doctor.setExperience();
-        assertEquals(, doctor.getExperience());
+        doctor.setExperience(15);
+        assertEquals(15, doctor.getExperience());
     }
 
     @Test
     void getAvailableFrom() {
-        assertEquals(, doctor.getAvailableFrom());
+        assertEquals(LocalTime.parse("08:00"), doctor.getAvailableFrom());
     }
 
     @Test
     void setAvailableFrom() {
-        doctor.setAvailableFrom();
-        assertEquals(, doctor.getAvailableFrom());
+        doctor.setAvailableFrom(LocalTime.parse("10:00"));
+        assertEquals(LocalTime.parse("10:00"), doctor.getAvailableFrom());
     }
 
     @Test
     void getAvailableTo() {
-        assertEquals(, doctor.getAvailableTo());
+        assertEquals(LocalTime.parse("16:00"), doctor.getAvailableTo());
     }
 
     @Test
     void setAvailableTo() {
-        doctor.setAvailableTo();
-        assertEquals(, doctor.getAvailableTo());
+        doctor.setAvailableTo(LocalTime.parse("18:00"));
+        assertEquals(LocalTime.parse("18:00"), doctor.getAvailableTo());
     }
 
     @Test
     void getMobile() {
-        assertEquals(, doctor.getMobile());
+        assertEquals(9905768653L, doctor.getMobile());
     }
 
     @Test
     void setMobile() {
-        doctor.setMobile();
-        assertEquals(, doctor.getMobile());
+        doctor.setMobile(8905768653L);
+        assertEquals(8905768653L, doctor.getMobile());
     }
 
     @Test
     void getEmail() {
-        assertEquals(, doctor.getEmail());
+        assertEquals("sub@gmail.com", doctor.getEmail());
     }
 
     @Test
     void setEmail() {
-        doctor.setEmail();
-        assertEquals(, doctor.getEmail());
+        doctor.setEmail("suby@gmail.com");
+        assertEquals("suby@gmail.com", doctor.getEmail());
     }
 
     @Test
     void getHospitalDetails() {
-        assertEquals(, doctor.getHospitalDetails());
+        assertEquals("kalawati hospital", doctor.getHospitalDetails());
     }
 
     @Test
     void setHospitalDetails() {
-        doctor.setHospitalDetails();
-        assertEquals(, doctor.getHospitalDetails());
+        doctor.setHospitalDetails("Heart hospital");
+        assertEquals("Heart hospital", doctor.getHospitalDetails());
     }
 
     @Test
     void getUsername() {
-        assertEquals(, doctor.getUsername());
+        assertEquals("sub2019", doctor.getUsername());
     }
 
     @Test
     void setUsername() {
-        doctor.setUsername();
-        assertEquals(, doctor.getUsername());
+        doctor.setUsername("subh2019");
+        assertEquals("subh2019", doctor.getUsername());
     }
 }
