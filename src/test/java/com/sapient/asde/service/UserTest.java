@@ -77,12 +77,12 @@ class UserTest {
 
     @Test
     void getRole() {
-        assertEquals("PATIENT", user.getRole());
+        assertEquals(Role.DOCTOR, user.getRole());
     }
 
     @Test
     void setRole() {
-        user.setRole(Role.DOCTOR);
-        assertEquals("DOCTOR", user.getRole());
+        user.setRole(Role.PATIENT);
+        assertEquals(Role.PATIENT, user.getRole());
     }
 }
