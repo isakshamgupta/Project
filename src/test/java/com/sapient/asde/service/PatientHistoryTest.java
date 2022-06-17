@@ -7,13 +7,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PatientHistoryTest {
-
+    PatientHistory patientHistory;
     @BeforeEach
     void setUp() {
+        patientHistory = new PatientHistory();
     }
 
     @AfterEach
     void tearDown() {
+        patientHistory = null;
     }
 
     @Test
