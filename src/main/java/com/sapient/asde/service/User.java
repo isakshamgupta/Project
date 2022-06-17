@@ -1,6 +1,6 @@
 package com.sapient.asde.service;
 
-import javax.management.relation.Role;
+
 
 public class User {
     private Integer userid;

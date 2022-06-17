@@ -12,7 +12,7 @@ class UserTest {
     @BeforeEach
     void setUp() {
         user = new User(123, "Saksham",
-                "qwerty", "saksham@gmail.com", 9908734723L, Role.values(Doctor));
+                "qwerty", "saksham@gmail.com", 9908734723L, Role.DOCTOR);
     }
 
     @AfterEach
