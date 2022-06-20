@@ -1,9 +1,13 @@
+Database name : healthmanagement;			
+			
+			
 			PostgreSQL
 //CRUD
 create table registered_user(
 	userid serial primary key,
 	username varchar(20) unique not null,
 	password varchar(30) not null,
+	mobile numeric(10),
 	email varchar(30),
 	role varchar(20), --doctor/patient/admin
        
@@ -62,7 +66,7 @@ create table patient_case_sheet(
 	prescription varchar(100),
 	diet varchar(100),	
 	patient_id numeric(4),
-	doctor_id numeric(4)),        
+	doctor_id numeric(4),        
 	constraint fk_doctid foreign key(doctor_id) references doctor(doctor_id),
         constraint fk_patientid foreign key(patient_id) references patient(patient_id)
         
@@ -79,7 +83,6 @@ create table patient_history(
 	symptoms varchar(100),
 	prescription varchar(100),
 	diet varchar(100),
-	hostipal_details varchar(100)
 	patient_id numeric(4),	
         constraint fk_patient_id foreign key(patient_id) references patient(patient_id)
 );
