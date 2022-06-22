@@ -1,6 +1,7 @@
-package com.sapient.asde.service;
+package com.sapient.asde.model;
 
 
+import com.sapient.asde.model.Role;
 
 public class User {
     private Integer userid;

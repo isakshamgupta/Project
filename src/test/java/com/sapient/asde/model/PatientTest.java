@@ -1,5 +1,6 @@
-package com.sapient.asde.service;
+package com.sapient.asde.model;
 
+import com.sapient.asde.model.Patient;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

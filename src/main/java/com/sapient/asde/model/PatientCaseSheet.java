@@ -1,4 +1,4 @@
-package com.sapient.asde.service;
+package com.sapient.asde.model;
 
 import java.time.LocalDate;
 
