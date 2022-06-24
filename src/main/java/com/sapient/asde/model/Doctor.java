@@ -1,7 +1,12 @@
 package com.sapient.asde.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import java.time.LocalTime;
 
+@AllArgsConstructor
+@Builder
 public class Doctor {
     private Integer doctId;
     private String doctorName;
@@ -19,19 +24,19 @@ public class Doctor {
 
     }
 
-    public Doctor(Integer doctId, String doctorName, String qualification, String specialization, Integer experience, LocalTime availableFrom, LocalTime availableTo, Long mobile, String email, String hospitalDetails, String username) {
-        this.doctId = doctId;
-        this.doctorName = doctorName;
-        this.qualification = qualification;
-        this.specialization = specialization;
-        this.experience = experience;
-        this.availableFrom = availableFrom;
-        this.availableTo = availableTo;
-        this.mobile = mobile;
-        this.email = email;
-        this.hospitalDetails = hospitalDetails;
-        this.username = username;
-    }
+//    public Doctor(Integer doctId, String doctorName, String qualification, String specialization, Integer experience, LocalTime availableFrom, LocalTime availableTo, Long mobile, String email, String hospitalDetails, String username) {
+//        this.doctId = doctId;
+//        this.doctorName = doctorName;
+//        this.qualification = qualification;
+//        this.specialization = specialization;
+//        this.experience = experience;
+//        this.availableFrom = availableFrom;
+//        this.availableTo = availableTo;
+//        this.mobile = mobile;
+//        this.email = email;
+//        this.hospitalDetails = hospitalDetails;
+//        this.username = username;
+//    }
 
     public Integer getDoctId() {
         return doctId;
