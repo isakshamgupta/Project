@@ -33,14 +33,14 @@ class DoctorPatientTest {
     }
 
     @Test
-    void getDoctId() {
-        assertEquals(101, doctorPatient.getDoctId());
+    void getdoctorId() {
+        assertEquals(101, doctorPatient.getdoctorId());
     }
 
     @Test
-    void setDoctId() {
-        doctorPatient.setDoctId(102);
-        assertEquals(102, doctorPatient.getDoctId());
+    void setdoctorId() {
+        doctorPatient.setdoctorId(102);
+        assertEquals(102, doctorPatient.getdoctorId());
     }
 
     @Test

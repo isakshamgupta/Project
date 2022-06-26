@@ -27,14 +27,14 @@ class DoctorTest {
     }
 
     @Test
-    void getDoctId() {
-        assertEquals(101, doctor.getDoctId());
+    void getdoctorId() {
+        assertEquals(101, doctor.getdoctorId());
     }
 
     @Test
-    void setDoctId() {
-        doctor.setDoctId(100);
-        assertEquals(100, doctor.getDoctId());
+    void setdoctorId() {
+        doctor.setdoctorId(100);
+        assertEquals(100, doctor.getdoctorId());
     }
 
     @Test

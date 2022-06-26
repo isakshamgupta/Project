@@ -5,10 +5,10 @@ import lombok.Builder;
 
 import java.time.LocalTime;
 
-@AllArgsConstructor
+
 @Builder
 public class Doctor {
-    private Integer doctId;
+    private Integer doctorId;
     private String doctorName;
     private String qualification;
     private String specialization;
@@ -24,26 +24,26 @@ public class Doctor {
 
     }
 
-//    public Doctor(Integer doctId, String doctorName, String qualification, String specialization, Integer experience, LocalTime availableFrom, LocalTime availableTo, Long mobile, String email, String hospitalDetails, String username) {
-//        this.doctId = doctId;
-//        this.doctorName = doctorName;
-//        this.qualification = qualification;
-//        this.specialization = specialization;
-//        this.experience = experience;
-//        this.availableFrom = availableFrom;
-//        this.availableTo = availableTo;
-//        this.mobile = mobile;
-//        this.email = email;
-//        this.hospitalDetails = hospitalDetails;
-//        this.username = username;
-//    }
-
-    public Integer getDoctId() {
-        return doctId;
+    public Doctor(Integer doctorId, String doctorName, String qualification, String specialization, Integer experience, LocalTime availableFrom, LocalTime availableTo, Long mobile, String email, String hospitalDetails, String username) {
+        this.doctorId = doctorId;
+        this.doctorName = doctorName;
+        this.qualification = qualification;
+        this.specialization = specialization;
+        this.experience = experience;
+        this.availableFrom = availableFrom;
+        this.availableTo = availableTo;
+        this.mobile = mobile;
+        this.email = email;
+        this.hospitalDetails = hospitalDetails;
+        this.username = username;
     }
 
-    public void setDoctId(Integer doctId) {
-        this.doctId = doctId;
+    public Integer getdoctorId() {
+        return doctorId;
+    }
+
+    public void setdoctorId(Integer doctorId) {
+        this.doctorId = doctorId;
     }
 
     public String getDoctorName() {
@@ -129,7 +129,7 @@ public class Doctor {
     @Override
     public String toString() {
         return "Doctor{" +
-                "doctId=" + doctId +
+                "doctorId=" + doctorId +
                 ", doctorName='" + doctorName + '\'' +
                 ", qualification='" + qualification + '\'' +
                 ", specialization='" + specialization + '\'' +

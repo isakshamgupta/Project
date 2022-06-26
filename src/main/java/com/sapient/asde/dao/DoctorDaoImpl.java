@@ -22,7 +22,7 @@ public class DoctorDaoImpl implements DoctorDAO {
 
                 //Employee employee= new Employee(<parameters>);
 
-                Doctor doctor= Doctor.builder().doctId(resultSet.getInt("doctor_id"))
+                Doctor doctor= Doctor.builder().doctorId(resultSet.getInt("doctor_id"))
                         .doctorName(resultSet.getString("doctor_name"))
                         .specialization(resultSet.getString("specialization"))
                         //convert java.sql.Date to java.time.LocalDate, use toLocalDate()
@@ -56,7 +56,7 @@ public class DoctorDaoImpl implements DoctorDAO {
             ResultSet resultSet= statement.executeQuery(DoctorQueryMapper.GET_ALL_DOCTOR);
             List<Doctor> doctorList= new ArrayList<>();
             while(resultSet.next()){
-                Doctor doctor= Doctor.builder().doctId(resultSet.getInt("doctor_id"))
+                Doctor doctor= Doctor.builder().doctorId(resultSet.getInt("doctor_id"))
                         .doctorName(resultSet.getString("doctor_name"))
                         .specialization(resultSet.getString("specialization"))
                         //convert java.sql.Date to java.time.LocalDate, use toLocalDate()
@@ -86,10 +86,10 @@ public class DoctorDaoImpl implements DoctorDAO {
                 Connection connection= PostgresConnection.getConnection();
                 PreparedStatement preparedStatement= connection.prepareStatement(DoctorQueryMapper.ADD_DOCTOR);
         ) {
-            preparedStatement.setInt(1,doctor.getDoctId());
+            preparedStatement.setInt(1,doctor.getdoctorId());
             preparedStatement.setString(2, doctor.getDoctorName());
             preparedStatement.setString(3, doctor.getSpecialization());
-            //java.time.LocalDate to javva.sql.Date
+            //java.time.LocalDate to java.sql.Date
             preparedStatement.setTime(4, Time.valueOf(doctor.getAvailableFrom()));
             preparedStatement.setTime(5, Time.valueOf(doctor.getAvailableTo()));
             preparedStatement.setString(6,doctor.getHospitalDetails());
@@ -101,7 +101,7 @@ public class DoctorDaoImpl implements DoctorDAO {
             // Same method, preparedStatement.executeUpdate() is used for sql insert/update/delete
             int n= preparedStatement.executeUpdate();
             if(n>0){
-                return doctor.getDoctId();
+                return doctor.getdoctorId();
             }
             logger.info("Unable to insert employee");
             return null;
@@ -126,7 +126,7 @@ public class DoctorDaoImpl implements DoctorDAO {
             if(n>0){
                 return doctorid;
             }
-            logger.info("Unable to delete employee, empno may be invalid");
+            logger.info("Unable to delete doctor, doctorId may be invalid");
             return null;
 
         }catch (SQLException e){
@@ -148,7 +148,7 @@ public class DoctorDaoImpl implements DoctorDAO {
             // Same method, preparedStatement.executeUpdate() is used for sql insert/update/delete
             int n= preparedStatement.executeUpdate();
             if(n>0){
-                return doctor.getDoctId();
+                return doctor.getdoctorId();
             }
             logger.info("Unable to update employee");
             return null;

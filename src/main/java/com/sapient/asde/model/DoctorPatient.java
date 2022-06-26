@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class DoctorPatient {
     private Integer doctorPatientId;
-    private Integer doctId;
+    private Integer doctorId;
     private Integer patientId;
     private LocalDate appointmentDate;
 
@@ -12,9 +12,9 @@ public class DoctorPatient {
 
     }
 
-    public DoctorPatient(Integer doctorPatientId, Integer doctId, Integer patientId, LocalDate appointmentDate) {
+    public DoctorPatient(Integer doctorPatientId, Integer doctorId, Integer patientId, LocalDate appointmentDate) {
         this.doctorPatientId = doctorPatientId;
-        this.doctId = doctId;
+        this.doctorId = doctorId;
         this.patientId = patientId;
         this.appointmentDate = appointmentDate;
     }
@@ -27,12 +27,12 @@ public class DoctorPatient {
         this.doctorPatientId = doctorPatientId;
     }
 
-    public Integer getDoctId() {
-        return doctId;
+    public Integer getdoctorId() {
+        return doctorId;
     }
 
-    public void setDoctId(Integer doctId) {
-        this.doctId = doctId;
+    public void setdoctorId(Integer doctorId) {
+        this.doctorId = doctorId;
     }
 
     public Integer getPatientId() {
@@ -55,7 +55,7 @@ public class DoctorPatient {
     public String toString() {
         return "DoctorPatient{" +
                 "doctorPatientId=" + doctorPatientId +
-                ", doctId=" + doctId +
+                ", doctorId=" + doctorId +
                 ", patientId=" + patientId +
                 ", appointmentDate=" + appointmentDate +
                 '}';
