@@ -1,0 +1,6 @@
+com\sapient\asde\model\PatientTest.class
+com\sapient\asde\model\UserTest.class
+com\sapient\asde\model\DoctorPatientTest.class
+com\sapient\asde\model\PatientHistoryTest.class
+com\sapient\asde\model\DoctorTest.class
+com\sapient\asde\model\PatientCaseSheetTest.class

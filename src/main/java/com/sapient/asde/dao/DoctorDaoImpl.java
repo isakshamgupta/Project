@@ -142,8 +142,8 @@ public class DoctorDaoImpl implements DoctorDAO {
                 PreparedStatement preparedStatement= connection.prepareStatement(DoctorQueryMapper.UPDATE_DOCTOR);
         ) {
 
-            preparedStatement.setTime(4, Time.valueOf(doctor.getAvailableFrom()));
-            preparedStatement.setTime(5, Time.valueOf(doctor.getAvailableTo()));
+            preparedStatement.setTime(1, Time.valueOf(doctor.getAvailableFrom()));
+            preparedStatement.setTime(2, Time.valueOf(doctor.getAvailableTo()));
 
             // Same method, preparedStatement.executeUpdate() is used for sql insert/update/delete
             int n= preparedStatement.executeUpdate();
